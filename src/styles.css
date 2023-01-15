@@ -61,3 +61,10 @@ li {
 
   padding: 2px 2px 2px 2px;
 }
+.weathertemp .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+.weathertemp .active:hover {
+  text-decoration: none;
+}

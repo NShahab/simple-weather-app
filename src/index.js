@@ -32,6 +32,8 @@ function getCitytemp(Pcity) {
     let wind = Math.round(response.data.wind.speed);
     let icon = response.data.weather[0].icon;
 
+    celsiusTemperature = response.data.main.temp;
+
     let h1 = document.querySelector("h1");
     h1.innerHTML = city;
     let templabel = document.querySelector("#temp");
@@ -89,5 +91,32 @@ function current(event) {
   }
   getCurrentPosition();
 }
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let btncurrent = document.querySelector("#current");
 btncurrent.addEventListener("click", current);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+getCitytemp("paris");

@@ -50,7 +50,7 @@
         </ul>
         <div class="row">
           <div class="col-6">
-            <div class="clearfix">
+            <div class="clearfix weathertemp">
               <img
                 src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                 alt="Cloudy icon"
@@ -59,7 +59,10 @@
               />
               <div class="float-left">
                 <span class="temperature" id="temp">19</span
-                ><span class="units">°C | <a href="#">°F</a></span>
+                ><span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
               </div>
             </div>
           </div>
