@@ -30,6 +30,7 @@ function getCitytemp(Pcity) {
     let humidity = Math.round(response.data.main.humidity);
     let description = response.data.weather[0].description;
     let wind = Math.round(response.data.wind.speed);
+    let icon = response.data.weather[0].icon;
 
     let h1 = document.querySelector("h1");
     h1.innerHTML = city;
@@ -41,6 +42,11 @@ function getCitytemp(Pcity) {
     descriptionlabel.innerHTML = description;
     let windlabel = document.querySelector("#wind");
     windlabel.innerHTML = wind;
+    let iconlabel = document.querySelector("#icon");
+    iconlabel.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${icon}@2x.png`
+    );
   }
 
   let apiKey = "eb9542c65e739e0fb25ade97c749e2aa";

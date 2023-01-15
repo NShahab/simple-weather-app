@@ -55,6 +55,7 @@
                 src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                 alt="Cloudy icon"
                 class="weather-icon float-left"
+                id="icon"
               />
               <div class="float-left">
                 <span class="temperature" id="temp">19</span
@@ -64,7 +65,6 @@
           </div>
           <div class="col-6">
             <ul>
-              <li>Precipitation:<span id="Precipitation"> 0 </span>%</li>
               <li>Humidity:<span id="humidity"> 8 </span> %</li>
               <li>Wind: <span id="wind">8 </span> km/h</li>
             </ul>
@@ -72,10 +72,12 @@
         </div>
       </div>
       <div class="footer">
-        <a href="https://github.com/NShahab/simple-weather-app/tree/master"
-          >open-source code
-        </a>
-        by nahid shahab
+        <small>
+          <a href="https://github.com/NShahab/simple-weather-app/tree/master"
+            >open-source code
+          </a>
+          by nahid shahab
+        </small>
       </div>
     </div>
     <script src="src/index.js"></script>
