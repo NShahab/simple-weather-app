@@ -165,9 +165,6 @@ let celsiusTemperature = null;
 let btncurrent = document.querySelector("#current");
 btncurrent.addEventListener("click", current);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 getCitytemp("paris");
